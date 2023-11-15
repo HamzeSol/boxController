@@ -1,0 +1,48 @@
+/*******************************************************
+This program was created by the CodeWizardAVR V4.00 
+Automatic Program Generator
+© Copyright 1998-2023 Pavel Haiduc, HP InfoTech S.R.L.
+http://www.hpinfotech.ro
+
+Project : 
+Version : 
+Date    : 11/14/2023
+Author  : 
+Company : 
+Comments: 
+
+
+Chip type               : ATmega32A
+Program type            : Application
+AVR Core Clock frequency: 8.000000 MHz
+Memory model            : Small
+External RAM size       : 0
+Data Stack size         : 512
+*******************************************************/
+
+// I/O Registers definitions
+//#include <mega32a.h>
+//#include <delay.h>
+//#include <io.h>
+
+
+// Alphanumeric LCD functions
+//#include <alcd.h>
+
+#include "hwLayer.h"
+
+
+// Declare your global variables here
+
+void main(void)
+{
+hwInit();
+lcd_puts("Hi me");
+LcdBLight(1);
+while (1)
+      {
+      
+      }
+}
+
+

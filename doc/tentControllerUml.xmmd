@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.4">
+ <xmi:Documentation contact="www.metamill.com" exporter="Metamill" exporterVersion="8.2 (build 2022)" shortDescription="Metamill Model (tentControllerUml)" notice="modified: 20231115-11:49:59"/>
+ <uml:Model xmi:type="uml:Model" xmi:id="mm:3027ac5a-2d0c-4cb9-bf78-977711fe876c" name="tentControllerUml">
+  <packagedElement xmi:type="uml:Package" xmi:id="mm:f71a6b8f-4e3c-441c-bc34-5c24a2ab9f1e" name="UseCaseView" visibility="public"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="mm:90acc0ba-ecad-4713-a1e5-fa1125261e76" name="DesignView" visibility="public">
+   <packagedElement xmi:type="uml:Package" xmi:id="mm:6fa77933-c3c3-11d7-835d-97800b524c04" name="std" visibility="public">
+    <packagedElement xmi:type="uml:Class" xmi:id="mm:7fbf5b20-c3c3-11d7-835d-97800b524c04" name="deque" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="mm:864dc04e-c3c3-11d7-835d-97800b524c04" name="list" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="mm:8cdc4c97-c3c3-11d7-835d-97800b524c04" name="queue" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="mm:92d21aa5-c3c3-11d7-835d-97800b524c04" name="priority_queue" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="mm:9d8cb17b-c3c3-11d7-835d-97800b524c04" name="stack" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="mm:a41b3ef9-c3c3-11d7-835d-97800b524c04" name="vector" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="mm:a97887a3-c3c3-11d7-835d-97800b524c04" name="map" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="mm:b09f9503-c3c3-11d7-835d-97800b524c04" name="multimap" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="mm:b72e03f5-c3c3-11d7-835d-97800b524c04" name="set" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="mm:bac181d0-c3c3-11d7-835d-97800b524c04" name="multiset" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="mm:cc0aad73-c3c3-11d7-835d-97800b524c04" name="bitset" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="mm:996fcff0-9487-11dc-9e2e-e89bc01e1c02" name="string" visibility="public"/>
+   </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="mm:0fc7a7e2-4845-4c89-be1b-7b07c2dd4694" name="ImplView" visibility="public"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="mm:0f324c70-aa2f-4370-a589-28df10b19cb7" name="ProfileView" visibility="public">
+   <ownedRule xmi:type="uml:Constraint" constrainedElement="mm:0f324c70-aa2f-4370-a589-28df10b19cb7">
+    <specification xmi:type="uml:OpaqueExpression" body="no_docgen"/>
+   </ownedRule>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="mm:fc97f203-ea3b-4302-8196-3bd88e7370d6" name="NewActor" visibility="public"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="mm:94e0ac85-bc79-4d79-9ff1-598858736d46" name="HumidControl" visibility="public"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="mm:911f2f64-1fde-4df9-9993-f2d6c0229022" name="TempControl" visibility="public"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="mm:97cc667d-69f0-4578-a9a3-5e620bb95711" name="AirControl" visibility="public"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="mm:a3aceb1f-fc10-4978-81c7-829b510e6b62" name="ParameterCheck" visibility="public"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="mm:032632d0-2e60-4a05-8895-cab3cc591878" name="LightControl" visibility="public"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:ca6d5af6-6768-4148-998f-ca3296fde6fa" name="2GPIO" visibility="public"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:dbf2526f-5b5a-48ed-abce-56e9e9a501cd" name="Relay" visibility="public">
+   <ownedElement xmi:type="uml:Dependency" xmi:id="mm:5a005e98-9e05-4264-9845-9182610f8a3c" visibility="public" supplier="mm:dbf2526f-5b5a-48ed-abce-56e9e9a501cd" client="mm:969c8257-438c-4ca3-a435-2f2208e302b0"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:75f57b59-92fd-4f6d-9a5b-bc3d9f76884a" name="SHT11" visibility="public">
+   <ownedElement xmi:type="uml:Dependency" xmi:id="mm:1adce57f-38f8-4f1e-8e84-b91f4cbccbfb" visibility="public" supplier="mm:75f57b59-92fd-4f6d-9a5b-bc3d9f76884a" client="mm:ca6d5af6-6768-4148-998f-ca3296fde6fa"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:969c8257-438c-4ca3-a435-2f2208e302b0" name="humidifier" visibility="public"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:5c8e87ad-059a-44fb-998c-1adae95a6a70" name="1GPIO" visibility="public">
+   <ownedElement xmi:type="uml:Dependency" xmi:id="mm:1248aa6b-e077-482e-a799-cf5294ab2a82" visibility="public" supplier="mm:5c8e87ad-059a-44fb-998c-1adae95a6a70" client="mm:dbf2526f-5b5a-48ed-abce-56e9e9a501cd"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:f454a3f5-52ba-463f-92a8-304ce8bd0498" name="1PWM2" visibility="public">
+   <ownedElement xmi:type="uml:Dependency" xmi:id="mm:3ca4f0bd-9cd7-469b-8aa0-6a3732aaffba" visibility="public" supplier="mm:f454a3f5-52ba-463f-92a8-304ce8bd0498" client="mm:9acd25ba-3489-4ff5-9973-dfc1f929fa2d"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:9acd25ba-3489-4ff5-9973-dfc1f929fa2d" name="Relay2" visibility="public">
+   <ownedElement xmi:type="uml:Dependency" xmi:id="mm:2e77ebd3-2841-45ac-b82e-3a00d675f98a" visibility="public" supplier="mm:9acd25ba-3489-4ff5-9973-dfc1f929fa2d" client="mm:8c1ca4f7-90a0-465c-a565-5f15fea4230f"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:8c1ca4f7-90a0-465c-a565-5f15fea4230f" name="Fan" visibility="public"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:f6db74db-64fa-459d-9330-fad5e1e36a54" name="c_1GPIO" visibility="public"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:86ebfc26-9f56-471e-8fe1-c7da2faa03c9" name="c_humidifier" visibility="public"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:6ad26110-f31f-44ed-a777-7f3603d8376f" name="c_Relay" visibility="public"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:2631eed9-670b-453d-a0a2-ee6f3b3a2ff7" name="c_Fan" visibility="public"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:f364f42a-c42c-421b-8676-ae05aa85943e" name="c_SHT11" visibility="public"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:496bbc0d-5062-4427-b510-eb296e015314" name="c_2GPIO" visibility="public"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:99322e96-bfae-4784-bdaa-bbc0197da446" name="LCD" visibility="public"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:b338d484-1b24-44e5-b6c9-b51ff70855ca" name="4GPIO" visibility="public">
+   <ownedElement xmi:type="uml:Dependency" xmi:id="mm:5da97d01-b65e-4928-babd-f793576694de" visibility="public" supplier="mm:b338d484-1b24-44e5-b6c9-b51ff70855ca" client="mm:99322e96-bfae-4784-bdaa-bbc0197da446"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:f1217762-0245-4872-aa74-337da2f45ac5" name="1PWM" visibility="public"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="mm:5c8e1c8a-daf6-4614-97cb-0185eb615235" name="LED" visibility="public"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="mm:24f67f46-9d4a-455d-8749-a76c14ba3bb5" visibility="public" supplier="mm:6ad26110-f31f-44ed-a777-7f3603d8376f" client="mm:86ebfc26-9f56-471e-8fe1-c7da2faa03c9"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="mm:e85121d9-bf9e-4ff0-b230-98ba46be86dd" visibility="public" supplier="mm:f6db74db-64fa-459d-9330-fad5e1e36a54" client="mm:6ad26110-f31f-44ed-a777-7f3603d8376f"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="mm:64f79fa4-d394-45ba-9109-d466388e1a45" visibility="public" supplier="mm:f364f42a-c42c-421b-8676-ae05aa85943e" client="mm:496bbc0d-5062-4427-b510-eb296e015314"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="mm:3b05fbbd-bfb5-43fe-9221-7d1edf3e096d" visibility="public" supplier="mm:99322e96-bfae-4784-bdaa-bbc0197da446" client="mm:b338d484-1b24-44e5-b6c9-b51ff70855ca"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="mm:54ee1f52-9073-4779-9ff5-ea4045d7cb4c" visibility="public" supplier="mm:f1217762-0245-4872-aa74-337da2f45ac5" client="mm:5c8e1c8a-daf6-4614-97cb-0185eb615235"/>
+  <packagedElement xmi:type="uml:Profile" xmi:id="mm:bc5c26eb-70d7-41ad-8f61-3548adff5c8a" name="Metamill_profile">
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:cb5d6c6b-8c7c-11dc-8191-d5d2e607e6a5" name="bool"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:cf8982bb-8c7c-11dc-8191-d5d2e607e6a5" name="char"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:c3edab3d-8c83-11dc-8191-d5d2e607e6a5" name="clock_t"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:2000dd25-8c7d-11dc-8191-d5d2e607e6a5" name="double"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:18d9dab5-8c7d-11dc-8191-d5d2e607e6a5" name="float"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:f647cd45-8c7c-11dc-8191-d5d2e607e6a5" name="int"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:0495f165-8c7d-11dc-8191-d5d2e607e6a5" name="long"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:255e31ff-8c7d-11dc-8191-d5d2e607e6a5" name="long double"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:0069bcc5-8c7d-11dc-8191-d5d2e607e6a5" name="long int"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:2d1de575-8c7d-11dc-8191-d5d2e607e6a5" name="long long"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:e6c876d5-8c7c-11dc-8191-d5d2e607e6a5" name="short"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:dfa17f05-8c7c-11dc-8191-d5d2e607e6a5" name="short int"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:1bd6c6ed-8c81-11dc-8191-d5d2e607e6a5" name="size_t"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:c0f29623-8c83-11dc-8191-d5d2e607e6a5" name="time_t"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:d44e40c5-8c7c-11dc-8191-d5d2e607e6a5" name="unsigned char"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:fc3dba25-8c7c-11dc-8191-d5d2e607e6a5" name="unsigned int"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:0f507495-8c7d-11dc-8191-d5d2e607e6a5" name="unsigned long"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:08297c25-8c7d-11dc-8191-d5d2e607e6a5" name="unsigned long int"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:3313c58f-8c7d-11dc-8191-d5d2e607e6a5" name="unsigned long long"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:f051d395-8c7c-11dc-8191-d5d2e607e6a5" name="unsigned short"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:e9c37385-8c7c-11dc-8191-d5d2e607e6a5" name="unsigned short int"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:bafcb523-8c83-11dc-8191-d5d2e607e6a5" name="void"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:dadccb05-8c7c-11dc-8191-d5d2e607e6a5" name="wchar"/>
+   <ownedElement xmi:type="uml:PrimitiveType" xmi:id="mm:21cca0bd-8c81-11dc-8191-d5d2e607e6a5" name="wchar_t"/>
+  </packagedElement>
+ </uml:Model>
+ <xmi:Extension extender="Metamill" extenderID="(build 2022)">
+  <profileContainer>
+   <metaElement xmi:idref="mm:496bbc0d-5062-4427-b510-eb296e015314" mstereo="system"/>
+   <metaElement xmi:idref="mm:f1217762-0245-4872-aa74-337da2f45ac5" mstereo="system"/>
+   <metaElement xmi:idref="mm:969c8257-438c-4ca3-a435-2f2208e302b0" mstereo="file"/>
+   <metaElement xmi:idref="mm:6ad26110-f31f-44ed-a777-7f3603d8376f" mstereo="system"/>
+   <metaElement xmi:idref="mm:fc97f203-ea3b-4302-8196-3bd88e7370d6" mstereo="actor"/>
+   <metaElement xmi:idref="mm:f364f42a-c42c-421b-8676-ae05aa85943e" mstereo="file"/>
+   <metaElement xmi:idref="mm:5c8e1c8a-daf6-4614-97cb-0185eb615235" mstereo="file"/>
+   <metaElement xmi:idref="mm:b338d484-1b24-44e5-b6c9-b51ff70855ca" mstereo="system"/>
+   <metaElement xmi:idref="mm:f454a3f5-52ba-463f-92a8-304ce8bd0498" mstereo="system"/>
+   <metaElement xmi:idref="mm:8c1ca4f7-90a0-465c-a565-5f15fea4230f" mstereo="file"/>
+   <metaElement xmi:idref="mm:3027ac5a-2d0c-4cb9-bf78-977711fe876c">
+    <data tag="mpacksdir" value="${BASEMPACKSDIR}"/>
+    <data tag="sourcedir" value="${BASESOURCEDIR}"/>
+    <data tag="documsdir" value="${BASEDOCUMSDIR}"/>
+    <data tag="scriptdir" value="${BASESCRIPTDIR}"/>
+    <data tag="exportdir" value="${BASEEXPORTDIR}"/>
+    <data tag="imprules"/>
+    <data tag="cf_codelang" value="1"/>
+    <data tag="cf_genemark" value="1"/>
+    <data tag="cf_codeconf" value="suppcimp=true;hppext=.h;cppext=.cpp;hpppatt=(DIR)\(FILE).(EXT);cpppatt=(DIR)\(FILE).(EXT);visualc=false;cpp11=true;attrpfix=m_;getpfix=get_;setpfix=set_;listcpp=list&lt;*&gt;;listjava=Vector;listcs=List&lt;&gt;;listvb=List&lt;&gt;"/>
+    <data tag="cf_macros"/>
+    <data tag="cf_integralcode" value="0"/>
+    <data tag="__M_documentation" value="This is a base model template for C++ development.
+It contains C++ primitive data types.
+"/>
+   </metaElement>
+   <metaElement xmi:idref="mm:ca6d5af6-6768-4148-998f-ca3296fde6fa" mstereo="system"/>
+   <metaElement xmi:idref="mm:75f57b59-92fd-4f6d-9a5b-bc3d9f76884a" mstereo="file"/>
+   <metaElement xmi:idref="mm:2631eed9-670b-453d-a0a2-ee6f3b3a2ff7" mstereo="file"/>
+   <metaElement xmi:idref="mm:99322e96-bfae-4784-bdaa-bbc0197da446" mstereo="file"/>
+   <metaElement xmi:idref="mm:f6db74db-64fa-459d-9330-fad5e1e36a54" mstereo="system"/>
+   <metaElement xmi:idref="mm:5c8e87ad-059a-44fb-998c-1adae95a6a70" mstereo="system"/>
+   <metaElement xmi:idref="mm:9acd25ba-3489-4ff5-9973-dfc1f929fa2d" mstereo="system"/>
+   <metaElement xmi:idref="mm:86ebfc26-9f56-471e-8fe1-c7da2faa03c9" mstereo="file"/>
+   <metaElement xmi:idref="mm:dbf2526f-5b5a-48ed-abce-56e9e9a501cd" mstereo="system"/>
+  </profileContainer>
+  <visualContainer>
+   <diagram name="STD" xmi:id="mm:99405332-5644-4369-b0a0-5114e30f288f" kind="Class Diagram" owner="mm:6fa77933-c3c3-11d7-835d-97800b524c04" geometry="width=924;height=1100" zoom="inZoom=88;outZoom=40;currZoom=88">
+    <elements>
+     <element vcode="VClass" xmi:id="mm:722fba1b-c509-4148-8b60-312007b4a463" metaid="mm:a41b3ef9-c3c3-11d7-835d-97800b524c04" geometry="x=108;y=112;width=60;height=40" order="1">
+      <data tag="name" value="vector"/>
+     </element>
+     <element vcode="VClass" xmi:id="mm:000b3ae3-e39e-4977-a634-03b051062f37" metaid="mm:cc0aad73-c3c3-11d7-835d-97800b524c04" geometry="x=108;y=244;width=60;height=40" order="2">
+      <data tag="name" value="bitset"/>
+     </element>
+     <element vcode="VClass" xmi:id="mm:67642980-f23c-4e51-b6a6-0cccb103d160" metaid="mm:7fbf5b20-c3c3-11d7-835d-97800b524c04" geometry="x=276;y=112;width=60;height=40" order="3">
+      <data tag="name" value="deque"/>
+     </element>
+     <element vcode="VClass" xmi:id="mm:5e604998-53e8-4386-b33f-ea23994a46ce" metaid="mm:864dc04e-c3c3-11d7-835d-97800b524c04" geometry="x=276;y=244;width=60;height=40" order="4">
+      <data tag="name" value="list"/>
+     </element>
+     <element vcode="VClass" xmi:id="mm:5a2dfb1c-af5f-4a15-83fc-1efd678b74d9" metaid="mm:a97887a3-c3c3-11d7-835d-97800b524c04" geometry="x=444;y=112;width=60;height=40" order="5">
+      <data tag="name" value="map"/>
+     </element>
+     <element vcode="VClass" xmi:id="mm:8782e5fd-d439-472e-af97-00d6a2fdfe35" metaid="mm:b09f9503-c3c3-11d7-835d-97800b524c04" geometry="x=451;y=244;width=75;height=40" order="6">
+      <data tag="name" value="multimap"/>
+     </element>
+     <element vcode="VClass" xmi:id="mm:0b166441-756b-4743-ae3f-6e7b541801b5" metaid="mm:bac181d0-c3c3-11d7-835d-97800b524c04" geometry="x=632;y=112;width=68;height=40" order="7">
+      <data tag="name" value="multiset"/>
+     </element>
+     <element vcode="VClass" xmi:id="mm:d3b38339-1cbd-4d06-b62b-08724546081f" metaid="mm:92d21aa5-c3c3-11d7-835d-97800b524c04" geometry="x=652;y=244;width=108;height=40" order="8">
+      <data tag="name" value="priority_queue"/>
+     </element>
+     <element vcode="VClass" xmi:id="mm:e4b1c6cb-3f22-41d9-8d04-d4c22bc15faa" metaid="mm:8cdc4c97-c3c3-11d7-835d-97800b524c04" geometry="x=844;y=112;width=60;height=40" order="9">
+      <data tag="name" value="queue"/>
+     </element>
+     <element vcode="VClass" xmi:id="mm:e85489ee-d601-4822-90fb-cdaa618a98f6" metaid="mm:b72e03f5-c3c3-11d7-835d-97800b524c04" geometry="x=844;y=244;width=60;height=40" order="10">
+      <data tag="name" value="set"/>
+     </element>
+     <element vcode="VClass" xmi:id="mm:ba16a6bc-ee30-4c27-89f9-27f454291950" metaid="mm:9d8cb17b-c3c3-11d7-835d-97800b524c04" geometry="x=108;y=376;width=60;height=40" order="11">
+      <data tag="name" value="stack"/>
+     </element>
+     <element vcode="VClass" xmi:id="mm:93455a4c-f024-47d2-873a-cbb2527b16ee" metaid="mm:996fcff0-9487-11dc-9e2e-e89bc01e1c02" geometry="x=108;y=508;width=60;height=40" order="12">
+      <data tag="name" value="string"/>
+     </element>
+    </elements>
+   </diagram>
+   <diagram name="tentControllerUseCase" xmi:id="mm:027d6725-a97c-44d9-8dee-5db7d8484c6c" kind="Profile Diagram" owner="mm:0f324c70-aa2f-4370-a589-28df10b19cb7" geometry="width=800;height=1100" zoom="inZoom=100;outZoom=40;currZoom=100"/>
+   <diagram name="useCases" xmi:id="mm:4b40f6fd-5b4b-412d-b3fd-9fd0d0067f79" kind="Use Case Diagram" owner="mm:3027ac5a-2d0c-4cb9-bf78-977711fe876c" geometry="width=1037;height=1100" zoom="inZoom=100;outZoom=40;currZoom=100">
+    <elements>
+     <element vcode="VActor" xmi:id="mm:a3b12de3-f6f3-40ab-8fbf-bca4416a8aa2" metaid="mm:fc97f203-ea3b-4302-8196-3bd88e7370d6" geometry="x=464;y=110;width=34;height=47" order="2">
+      <data tag="name" value="NewActor"/>
+      <data tag="flags" value="iconmode=true"/>
+     </element>
+     <element vcode="VUseCase" xmi:id="mm:a3862f21-6f26-4cdd-8e21-6697d1cc848c" metaid="mm:94e0ac85-bc79-4d79-9ff1-598858736d46" geometry="x=200;y=304;width=121;height=43" order="3">
+      <data tag="name" value="HumidControl"/>
+      <data tag="flags" value="iconmode=true;attrvisi=false;opervisi=false"/>
+     </element>
+     <element vcode="VUseCase" xmi:id="mm:9ff060d5-224c-4c87-8c22-2226ee2f7be9" metaid="mm:911f2f64-1fde-4df9-9993-f2d6c0229022" geometry="x=394;y=301;width=115;height=43" order="4">
+      <data tag="name" value="TempControl"/>
+      <data tag="flags" value="iconmode=true;attrvisi=false;opervisi=false"/>
+     </element>
+     <element vcode="VUseCase" xmi:id="mm:48aaa491-5844-4cfc-ac34-50a84f97c57c" metaid="mm:97cc667d-69f0-4578-a9a3-5e620bb95711" geometry="x=555;y=303;width=96;height=43" order="5">
+      <data tag="name" value="AirControl"/>
+      <data tag="flags" value="iconmode=true;attrvisi=false;opervisi=false"/>
+     </element>
+     <element vcode="VUseCase" xmi:id="mm:166e7864-47af-4753-a2de-783d5989be59" metaid="mm:a3aceb1f-fc10-4978-81c7-829b510e6b62" geometry="x=720;y=298;width=143;height=43" order="6">
+      <data tag="name" value="ParameterCheck"/>
+      <data tag="flags" value="iconmode=true;attrvisi=false;opervisi=false"/>
+     </element>
+     <element vcode="VUseCase" xmi:id="mm:7495aa97-6ad5-4848-8f66-d38244af7eed" metaid="mm:032632d0-2e60-4a05-8895-cab3cc591878" geometry="x=932;y=299;width=110;height=43" order="7">
+      <data tag="name" value="LightControl"/>
+      <data tag="flags" value="iconmode=true;attrvisi=false;opervisi=false"/>
+     </element>
+    </elements>
+   </diagram>
+   <diagram name="tentComponent" xmi:id="mm:b54f447b-9692-4f39-8324-c030d19b465d" kind="Component Diagram" owner="mm:3027ac5a-2d0c-4cb9-bf78-977711fe876c" geometry="width=968;height=1100" zoom="inZoom=100;outZoom=40;currZoom=100">
+    <elements>
+     <element vcode="VComponent" xmi:id="mm:4ac42346-4ae8-4845-b0fa-e6ebcc95626c" metaid="mm:ca6d5af6-6768-4148-998f-ca3296fde6fa" geometry="x=859;y=171;width=110;height=53" order="1">
+      <data tag="name" value="2GPIO"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=245,245,125"/>
+     </element>
+     <element vcode="VUseCase" xmi:id="mm:a12fa354-6cba-4f8f-b820-19c1e696b06a" metaid="mm:94e0ac85-bc79-4d79-9ff1-598858736d46" geometry="x=195;y=125;width=121;height=43" order="2">
+      <data tag="name" value="HumidControl"/>
+      <data tag="flags" value="iconmode=true;attrvisi=false;opervisi=false"/>
+     </element>
+     <element vcode="VUseCase" xmi:id="mm:2f682799-2593-4d56-bf72-2f33eb2ddadc" metaid="mm:911f2f64-1fde-4df9-9993-f2d6c0229022" geometry="x=190;y=241;width=115;height=43" order="3">
+      <data tag="name" value="TempControl"/>
+      <data tag="flags" value="iconmode=true;attrvisi=false;opervisi=false"/>
+     </element>
+     <element vcode="VUseCase" xmi:id="mm:d2e1ff73-715c-49e2-82b1-1e6066e7f10d" metaid="mm:97cc667d-69f0-4578-a9a3-5e620bb95711" geometry="x=186;y=403;width=96;height=43" order="4">
+      <data tag="name" value="AirControl"/>
+      <data tag="flags" value="iconmode=true;attrvisi=false;opervisi=false"/>
+     </element>
+     <element vcode="VUseCase" xmi:id="mm:238b2540-1c06-472a-a9f4-e3e133b22bf2" metaid="mm:a3aceb1f-fc10-4978-81c7-829b510e6b62" geometry="x=191;y=584;width=143;height=43" order="5">
+      <data tag="name" value="ParameterCheck"/>
+      <data tag="flags" value="iconmode=true;attrvisi=false;opervisi=false"/>
+     </element>
+     <element vcode="VUseCase" xmi:id="mm:fef187d7-ba9a-45ae-a0e6-92e47cce3d00" metaid="mm:032632d0-2e60-4a05-8895-cab3cc591878" geometry="x=183;y=718;width=110;height=43" order="6">
+      <data tag="name" value="LightControl"/>
+      <data tag="flags" value="iconmode=true;attrvisi=false;opervisi=false"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:d2ac3157-4d1a-460e-9164-7d9fcdb6d72a" metaid="mm:dbf2526f-5b5a-48ed-abce-56e9e9a501cd" geometry="x=666;y=273;width=110;height=53" order="7">
+      <data tag="name" value="Relay"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=245,245,125"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:f45c09c0-abf2-4122-883b-b1e0bca415ec" metaid="mm:75f57b59-92fd-4f6d-9a5b-bc3d9f76884a" geometry="x=461;y=179;width=110;height=53" order="8">
+      <data tag="name" value="SHT11"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=0,255,0"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:e9853cc5-557c-4865-bb9d-bb1258af9693" metaid="mm:969c8257-438c-4ca3-a435-2f2208e302b0" geometry="x=463;y=271;width=110;height=53" order="10">
+      <data tag="name" value="humidifier"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=0,128,255"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:ada8be61-a29d-4c98-94b7-def5d71c68d1" metaid="mm:5c8e87ad-059a-44fb-998c-1adae95a6a70" geometry="x=858;y=272;width=110;height=53" order="11">
+      <data tag="name" value="1GPIO"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=245,245,125"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:fe473546-1a10-4a3b-aee4-7dea41792b8f" metaid="mm:f454a3f5-52ba-463f-92a8-304ce8bd0498" geometry="x=863;y=462;width=110;height=53" order="12">
+      <data tag="name" value="1PWM2"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=245,245,125"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:4970fa87-1409-43aa-a9f6-3196170bed57" metaid="mm:9acd25ba-3489-4ff5-9973-dfc1f929fa2d" geometry="x=671;y=463;width=110;height=53" order="13">
+      <data tag="name" value="Relay2"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=245,245,125"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:f43734a6-3d45-4575-b8d1-5e34d4b4b3aa" metaid="mm:8c1ca4f7-90a0-465c-a565-5f15fea4230f" geometry="x=465;y=464;width=110;height=53" order="14">
+      <data tag="name" value="Fan"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=0,128,255"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:80c1087e-626f-43f4-bd74-4cb67e334d14" metaid="mm:f6db74db-64fa-459d-9330-fad5e1e36a54" geometry="x=858;y=346;width=110;height=53" order="19">
+      <data tag="name" value="c_1GPIO"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=245,245,125"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:2b04c267-8077-43e3-a62a-194a3b85b5e7" metaid="mm:86ebfc26-9f56-471e-8fe1-c7da2faa03c9" geometry="x=463;y=345;width=110;height=53" order="20">
+      <data tag="name" value="c_humidifier"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=0,128,255"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:a47450c7-2c78-4657-9177-733e22640e8e" metaid="mm:6ad26110-f31f-44ed-a777-7f3603d8376f" geometry="x=666;y=347;width=110;height=53" order="21">
+      <data tag="name" value="c_Relay"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=245,245,125"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:e42821fd-90c2-4787-a060-77b455df4da7" metaid="mm:99322e96-bfae-4784-bdaa-bbc0197da446" geometry="x=463;y=580;width=110;height=53" order="24">
+      <data tag="name" value="LCD"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=0,255,0"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:f3e01cf5-84f9-45a0-bd88-05431bba46b8" metaid="mm:b338d484-1b24-44e5-b6c9-b51ff70855ca" geometry="x=855;y=575;width=110;height=53" order="25">
+      <data tag="name" value="4GPIO"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=245,245,125"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:2dd2a8c2-b4f8-403b-91b8-3be53d9b6305" metaid="mm:f1217762-0245-4872-aa74-337da2f45ac5" geometry="x=858;y=702;width=110;height=53" order="27">
+      <data tag="name" value="1PWM"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=245,245,125"/>
+     </element>
+     <element vcode="VComponent" xmi:id="mm:1894cf67-2e19-4ad0-b914-3f3a6b577812" metaid="mm:5c8e1c8a-daf6-4614-97cb-0185eb615235" geometry="x=466;y=707;width=110;height=53" order="28">
+      <data tag="name" value="LED"/>
+      <data tag="flags" value="autosize=false;attrvisi=false;opervisi=false"/>
+      <data tag="cgeom" value="fill=0,255,0"/>
+     </element>
+    </elements>
+    <lines>
+     <line vcode="VRelationship" rstype="RSDependency" xmi:id="mm:b45d175b-4b48-44aa-94ee-df315f9dc382" metaid="mm:1adce57f-38f8-4f1e-8e84-b91f4cbccbfb" geometry="x=660;y=175" order="9">
+      <data tag="controlpoints" value="p0=(516.00,177.89);p1=(804.00,172.11)"/>
+      <data tag="sourceId" value="mm:f45c09c0-abf2-4122-883b-b1e0bca415ec"/>
+      <data tag="targetId" value="mm:4ac42346-4ae8-4845-b0fa-e6ebcc95626c"/>
+     </line>
+     <line vcode="VRelationship" rstype="RSDependency" xmi:id="mm:949fb585-778e-461c-b16c-6b2ac3944da9" metaid="mm:1248aa6b-e077-482e-a799-cf5294ab2a82" geometry="x=762;y=272" order="15">
+      <data tag="controlpoints" value="p0=(803.00,272.30);p1=(721.00,272.73)"/>
+      <data tag="sourceId" value="mm:ada8be61-a29d-4c98-94b7-def5d71c68d1"/>
+      <data tag="targetId" value="mm:d2ac3157-4d1a-460e-9164-7d9fcdb6d72a"/>
+     </line>
+     <line vcode="VRelationship" rstype="RSDependency" xmi:id="mm:c8670e66-f253-4ecb-a8a0-602edd981399" metaid="mm:5a005e98-9e05-4264-9845-9182610f8a3c" geometry="x=564;y=272" order="16">
+      <data tag="controlpoints" value="p0=(611.00,272.47);p1=(518.00,271.55)"/>
+      <data tag="sourceId" value="mm:d2ac3157-4d1a-460e-9164-7d9fcdb6d72a"/>
+      <data tag="targetId" value="mm:e9853cc5-557c-4865-bb9d-bb1258af9693"/>
+     </line>
+     <line vcode="VRelationship" rstype="RSDependency" xmi:id="mm:5635d8d7-90e1-43dc-adfb-1b1263512a59" metaid="mm:3ca4f0bd-9cd7-469b-8aa0-6a3732aaffba" geometry="x=767;y=462" order="17">
+      <data tag="controlpoints" value="p0=(808.00,462.30);p1=(726.00,462.73)"/>
+      <data tag="sourceId" value="mm:fe473546-1a10-4a3b-aee4-7dea41792b8f"/>
+      <data tag="targetId" value="mm:4970fa87-1409-43aa-a9f6-3196170bed57"/>
+     </line>
+     <line vcode="VRelationship" rstype="RSDependency" xmi:id="mm:4e07e75e-e8d2-4778-ae06-44b475f5f93f" metaid="mm:2e77ebd3-2841-45ac-b82e-3a00d675f98a" geometry="x=568;y=463" order="18">
+      <data tag="controlpoints" value="p0=(616.00,463.28);p1=(520.00,463.74)"/>
+      <data tag="sourceId" value="mm:4970fa87-1409-43aa-a9f6-3196170bed57"/>
+      <data tag="targetId" value="mm:f43734a6-3d45-4575-b8d1-5e34d4b4b3aa"/>
+     </line>
+     <line vcode="VRelationship" rstype="RSDependency" xmi:id="mm:3831280e-0a93-402e-a34b-f8c9b29c5107" metaid="mm:24f67f46-9d4a-455d-8749-a76c14ba3bb5" geometry="x=564;y=346" order="22">
+      <data tag="controlpoints" value="p0=(611.00,346.47);p1=(518.00,345.55)"/>
+      <data tag="sourceId" value="mm:a47450c7-2c78-4657-9177-733e22640e8e"/>
+      <data tag="targetId" value="mm:2b04c267-8077-43e3-a62a-194a3b85b5e7"/>
+     </line>
+     <line vcode="VRelationship" rstype="RSDependency" xmi:id="mm:fd920734-ebed-4411-9e5b-8bb58c1f7e85" metaid="mm:e85121d9-bf9e-4ff0-b230-98ba46be86dd" geometry="x=762;y=346" order="23">
+      <data tag="controlpoints" value="p0=(803.00,346.30);p1=(721.00,346.73)"/>
+      <data tag="sourceId" value="mm:80c1087e-626f-43f4-bd74-4cb67e334d14"/>
+      <data tag="targetId" value="mm:a47450c7-2c78-4657-9177-733e22640e8e"/>
+     </line>
+     <line vcode="VRelationship" rstype="RSDependency" xmi:id="mm:e9962af0-8091-4892-893f-85641552c38c" metaid="mm:5da97d01-b65e-4928-babd-f793576694de" geometry="x=659;y=577" order="26">
+      <data tag="controlpoints" value="p0=(800.00,575.70);p1=(518.00,579.30)"/>
+      <data tag="sourceId" value="mm:f3e01cf5-84f9-45a0-bd88-05431bba46b8"/>
+      <data tag="targetId" value="mm:e42821fd-90c2-4787-a060-77b455df4da7"/>
+     </line>
+     <line vcode="VRelationship" rstype="RSDependency" xmi:id="mm:a3485182-26b6-4fa2-bc6a-759383224bc4" metaid="mm:54ee1f52-9073-4779-9ff5-ea4045d7cb4c" geometry="x=662;y=704" order="29">
+      <data tag="controlpoints" value="p0=(803.00,702.70);p1=(521.00,706.30)"/>
+      <data tag="sourceId" value="mm:2dd2a8c2-b4f8-403b-91b8-3be53d9b6305"/>
+      <data tag="targetId" value="mm:1894cf67-2e19-4ad0-b914-3f3a6b577812"/>
+     </line>
+    </lines>
+   </diagram>
+  </visualContainer>
+ </xmi:Extension>
+</xmi:XMI>

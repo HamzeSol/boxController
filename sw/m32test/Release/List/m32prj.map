@@ -1,0 +1,57 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+str                                                                               0x0260      20
+keySetOldFlag                                                                     0x0274       1
+_base_y (alcd.lib)                                                                0x0275       4
+_lcd_x                                                                            0x0279       1
+_lcd_y                                                                            0x027A       1
+_lcd_maxx                                                                         0x027B       1
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+page                                                                              R5           1
+humid                                                                             R4           1
+temp                                                                              R7           1
+itemSelect                                                                        R6           1
+enteredMenu                                                                       R9           1
+blinkCounter                                                                      R10,R11      2
+keyMenuPressed                                                                    R8           1
+keySetPressed                                                                     R13          1
+keyMenuOldFlag                                                                    R12          1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+main                                                                              0x0007D     10
+ReadKeys                                                                          0x00087     32
+ShowMenu                                                                          0x000A7     63
+GetP1Button1                                                                      0x000E6      3
+GetP1Button2                                                                      0x000E9      3
+P4CharLcd                                                                         0x000EC      6
+P4CharLcdBacklight                                                                0x000F2      9
+AvrDelayMs                                                                        0x000FB      3
+hwInit                                                                            0x000FE     48
+initialize                                                                        0x0012E      2
+GetKeyMenu                                                                        0x00130      2
+GetKeySet                                                                         0x00132      6
+Disp                                                                              0x00138      7
+DispBacklight                                                                     0x0013F      5
+Delay                                                                             0x00144      5
+put_buff_G100                                                                     0x00149     46
+_print_G100                                                                       0x00177    293
+sprintf                                                                           0x0029C     55
+_lcd_write_nibble_G101                                                            0x002D3     34
+_lcd_write_data                                                                   0x002F5     13
+lcd_gotoxy                                                                        0x00302     20
+lcd_clear                                                                         0x00316     12
+lcd_putchar                                                                       0x00322     31
+lcd_puts                                                                          0x00341     15
+lcd_init                                                                          0x00350     45
+strlen                                                                            0x0037D     12
+strlenf                                                                           0x00389     13
