@@ -1,0 +1,17 @@
+temp/
+
+*.pdf
+*.cbi
+*.cof
+*.a
+*.o
+*.str1
+*.sym1
+*.sym2
+*.sym3
+*.cci
+
+
+
+
+

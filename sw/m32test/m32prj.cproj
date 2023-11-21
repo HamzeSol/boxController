@@ -59,6 +59,15 @@
     <Compile Include="interface.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="globalVariable.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SHT1x.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SHT1x_platform.c">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\vs\\CV.targets" />
 </Project>

@@ -32,3 +32,12 @@ typedef enum
 
 #define BUZZ_PORT (PORTC)
 #define BUZZ_PIN (GPIO_PIN_3)
+
+#define POMP1_PORT (PORTD)
+#define POMP1_PIN (GPIO_PIN_7)
+
+#define POMP2_PORT (PORTD)
+#define POMP2_PIN (GPIO_PIN_6)
+
+#define RELAY_PORT (PORTA)
+#define RELAY_PIN (GPIO_PIN_0)

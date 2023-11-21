@@ -16,3 +16,6 @@ void SetHeater(char _val);
 void SetCooler(char _val);
 
 void Delay(int _val);
+
+void getTime(unsigned char *_hour, unsigned char *_min, unsigned char *_sec);
+void setTime(unsigned char _hour, unsigned char _min, unsigned char _sec);

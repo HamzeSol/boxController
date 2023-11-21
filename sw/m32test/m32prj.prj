@@ -6,7 +6,7 @@ CV=4.00 Evaluation
 A=
 C=
 D=11/14/2023
-Files=3
+Files=6
 OpenedFiles=5
 OF1=main.c
 ActiveTab=1
@@ -32,6 +32,9 @@ TimeStamp5=1466893770
 F1=main.c
 F2=hw.c
 F3=interface.c
+F4=globalVariable.c
+F5=SHT1x.c
+F6=SHT1x_platform.c
 [CompilerDebug]
 Chip=ATmega32A
 CPUClock=8000000
@@ -140,7 +143,7 @@ UseUDSC_LGT8F=0
 RebuildAll=1
 LinkageInformationPresent=0
 COFFileTimeStamp=1466872819
-Build=34
+Build=62
 GlobalVarAddr=608
 EEPROMVarAddr=0
 [DefinedSymbolsDebug]
@@ -252,8 +255,8 @@ UseBootAppXmega=0
 UseUDSC_LGT8F=0
 RebuildAll=0
 LinkageInformationPresent=1
-COFFileTimeStamp=1466926824
-Build=34
+COFFileTimeStamp=1467332701
+Build=62
 IncludePath0=C:\cvavreval\inc
 IncludePath1=
 IncludePath2=
@@ -384,7 +387,7 @@ LibraryPath61=
 LibraryPath62=
 LibraryPath63=
 LibraryPath64=
-GlobalVarAddr=636
+GlobalVarAddr=662
 EEPROMVarAddr=0
 [DefinedSymbols]
 Count=0
@@ -534,41 +537,42 @@ L13=Enhanced function parameters passing: Mode 2
 L14=Automatic register allocation: Yes
 L15=Smart register allocation: Yes
 L16=
-L17=Build: 34
-L18=15340 line(s) compiled
+L17=Build: 62
+L18=23400 line(s) compiled
 L19=No errors
-L20=8 warning(s)
-L21=
-L22=Bit variables size: 0 byte(s)
-L23=
-L24=Data Stack area: 0x60 to 0x25F
-L25=Data Stack size: 512 byte(s)
-L26=Estimated Data Stack usage: 38 byte(s)
+L20=11 warning(s)
+L21=Data Stack area: 0x60 to 0x25F
+L22=Data Stack size: 512 byte(s)
+L23=Estimated Data Stack usage: 109 byte(s)
+L24=
+L25=RAM Global variables area: 0x260 to 0x295
+L26=RAM Global variables size: 54 byte(s)
 L27=
-L28=RAM Global variables area: 0x260 to 0x27B
-L29=RAM Global variables size: 28 byte(s)
+L28=Hardware Stack area: 0x296 to 0x85F
+L29=Hardware Stack size: 1482 byte(s)
 L30=
-L31=Hardware Stack area: 0x27C to 0x85F
-L32=Hardware Stack size: 1508 byte(s)
-L33=
-L34=Heap size: 0 byte(s)
-Lines=38
-L35=
-L36=EEPROM usage: 0 byte(s), 0.0% of EEPROM
-L37=Program size: 1086 words (2172 bytes), 6.6% of FLASH
-L38=203 words (406 bytes), 15.7% reduced by Code Compression
+L31=Heap size: 0 byte(s)
+L32=
+L33=EEPROM usage: 0 byte(s), 0.0% of EEPROM
+L34=
+Lines=33
+L35=Heap size: 0 byte(s)
+L36=
+L37=EEPROM usage: 0 byte(s), 0.0% of EEPROM
+L38=Program size: 2018 words (4036 bytes), 12.3% of FLASH
+L39=371 words (742 bytes), 15.5% reduced by Code Compression
 [BuildInfoAssembler]
-Lines=12
+Lines=0
 L1=AVRASM: AVR macro assembler 2.1.30 (build 592 Nov  7 2008 12:38:17)
 L2=Copyright (C) 1995-2008 ATMEL Corporation
 L3=
-L4=D:\projects\tentController\sw\m32test\Release\List\m32prj.asm(3191): No EEPROM data, deleting D:\projects\tentController\sw\m32test\Release\Exe\m32prj.eep
+L4=D:\projects\tentController\sw\m32test\Release\List\m32prj.asm(4861): No EEPROM data, deleting D:\projects\tentController\sw\m32test\Release\Exe\m32prj.eep
 L5=
 L6=ATmega32A memory use summary [bytes]:
 L7=Segment   Begin    End      Code   Data   Used    Size   Use%
 L8=---------------------------------------------------------------
-L9=[.cseg] 0x000000 0x00087c   2094     78   2172   32768   6.6%
-L10=[.dseg] 0x000060 0x00027c      0     28     28    2048   1.4%
+L9=[.cseg] 0x000000 0x000fc4   3886    150   4036   32768  12.3%
+L10=[.dseg] 0x000060 0x000296      0     54     54    2048   2.6%
 L11=[.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 L12=
 [Bookmarks0]
@@ -578,7 +582,7 @@ ScrollPosX=0
 ScrollPosY=0
 TimeStamp=1466894853
 [BookmarksFoldedCode]
-Files=13
+Files=20
 F1=D:\projects\tentController\sw\m32test\main.c
 F2=main.c
 F3=C:\cvavreval\inc\io.h
@@ -592,6 +596,13 @@ F10=interface.h
 F11=hwLayer.h
 F12=hwLayer.c
 F13=C:\cvavreval\inc\delay.h
+F14=hw.c
+F15=globalVariable.h
+F16=SHT1x.c
+F17=SHT1x_platform.c
+F18=SHT1x.h
+F19=C:\cvavreval\inc\ds1307_twi.h
+F20=hw.h
 [Bookmarks1]
 TimeStamp=1466866903
 Row=141
@@ -611,11 +622,11 @@ BK9=-1
 [FoldedCode1]
 Blocks=0
 [Bookmarks2]
-TimeStamp=1466925820
-Row=53
-Column=17
+TimeStamp=1467331662
+Row=0
+Column=0
 ScrollPosX=0
-ScrollPosY=39
+ScrollPosY=58
 BK0=-1
 BK1=-1
 BK2=-1
@@ -742,8 +753,8 @@ Blocks=0
 [FoldedCode4]
 Blocks=0
 [Bookmarks9]
-TimeStamp=1466923164
-Row=0
+TimeStamp=1467330607
+Row=14
 Column=0
 ScrollPosX=0
 ScrollPosY=13
@@ -758,9 +769,9 @@ BK7=-1
 BK8=-1
 BK9=-1
 [Bookmarks10]
-TimeStamp=1466917653
-Row=0
-Column=0
+TimeStamp=1466922166
+Row=3
+Column=18
 ScrollPosX=0
 ScrollPosY=0
 BK0=-1
@@ -773,8 +784,6 @@ BK6=-1
 BK7=-1
 BK8=-1
 BK9=-1
-[FoldedCode10]
-Blocks=0
 [Bookmarks11]
 TimeStamp=1466917621
 Row=0
@@ -791,12 +800,10 @@ BK6=-1
 BK7=-1
 BK8=-1
 BK9=-1
-[FoldedCode11]
-Blocks=0
 [Bookmarks12]
-TimeStamp=1466894446
-Row=11
-Column=14
+TimeStamp=1466921219
+Row=0
+Column=0
 ScrollPosX=0
 ScrollPosY=0
 BK0=-1
@@ -809,12 +816,6 @@ BK6=-1
 BK7=-1
 BK8=-1
 BK9=-1
-[FoldedCode12]
-Blocks=0
-[FoldedCode2]
-Blocks=0
-[FoldedCode9]
-Blocks=0
 [Bookmarks13]
 TimeStamp=711004640
 Row=9
@@ -833,29 +834,192 @@ BK8=-1
 BK9=-1
 [FoldedCode13]
 Blocks=0
+[Bookmarks14]
+TimeStamp=1467186604
+Row=77
+Column=5
+ScrollPosX=0
+ScrollPosY=91
+BK0=-1
+BK1=-1
+BK2=-1
+BK3=-1
+BK4=-1
+BK5=-1
+BK6=-1
+BK7=-1
+BK8=-1
+BK9=-1
+[FoldedCode14]
+Blocks=0
+[FoldedCode10]
+Blocks=0
+[FoldedCode11]
+Blocks=0
+[FoldedCode12]
+Blocks=0
+[Bookmarks15]
+TimeStamp=1467186415
+Row=5
+Column=29
+ScrollPosX=0
+ScrollPosY=0
+BK0=-1
+BK1=-1
+BK2=-1
+BK3=-1
+BK4=-1
+BK5=-1
+BK6=-1
+BK7=-1
+BK8=-1
+BK9=-1
+[FoldedCode15]
+Blocks=0
+[Bookmarks16]
+TimeStamp=1467189786
+Row=478
+Column=0
+ScrollPosX=0
+ScrollPosY=442
+BK0=-1
+BK1=-1
+BK2=-1
+BK3=-1
+BK4=-1
+BK5=-1
+BK6=-1
+BK7=-1
+BK8=-1
+BK9=-1
+[Bookmarks17]
+TimeStamp=1467189834
+Row=218
+Column=4
+ScrollPosX=0
+ScrollPosY=181
+BK0=-1
+BK1=-1
+BK2=-1
+BK3=-1
+BK4=-1
+BK5=-1
+BK6=-1
+BK7=-1
+BK8=-1
+BK9=-1
+[Bookmarks18]
+TimeStamp=1467189661
+Row=0
+Column=0
+ScrollPosX=0
+ScrollPosY=41
+BK0=-1
+BK1=-1
+BK2=-1
+BK3=-1
+BK4=-1
+BK5=-1
+BK6=-1
+BK7=-1
+BK8=-1
+BK9=-1
+[FoldedCode18]
+Blocks=0
+[FoldedCode16]
+Blocks=0
+[FoldedCode17]
+Blocks=0
+[FoldedCode9]
+Blocks=0
+[Bookmarks19]
+TimeStamp=1248811642
+Row=121
+Column=65
+ScrollPosX=0
+ScrollPosY=96
+BK0=-1
+BK1=-1
+BK2=-1
+BK3=-1
+BK4=-1
+BK5=-1
+BK6=-1
+BK7=-1
+BK8=-1
+BK9=-1
+[FoldedCode19]
+Blocks=0
+[FoldedCode2]
+Blocks=0
+[Bookmarks20]
+TimeStamp=1467331648
+Row=18
+Column=0
+ScrollPosX=0
+ScrollPosY=0
+BK0=-1
+BK1=-1
+BK2=-1
+BK3=-1
+BK4=-1
+BK5=-1
+BK6=-1
+BK7=-1
+BK8=-1
+BK9=-1
+[FoldedCode20]
+Blocks=0
 [HeadersList]
-Files=3
+Files=6
 F1=D:\projects\tentController\sw\m32test\main.c
 F2=D:\projects\tentController\sw\m32test\hw.c
 F3=D:\projects\tentController\sw\m32test\interface.c
+F4=D:\projects\tentController\sw\m32test\globalVariable.c
+F5=D:\projects\tentController\sw\m32test\SHT1x.c
+F6=D:\projects\tentController\sw\m32test\SHT1x_platform.c
 [Header1]
-Files=6
+Files=10
 F1=C:\cvavreval\inc\mega32a.h
 F2=C:\cvavreval\inc\mega32_bits.h
 F3=interface.h
-F4=C:\cvavreval\inc\stdio.h
-F5=C:\cvavreval\inc\io.h
-F6=C:\cvavreval\inc\stdarg.h
+F4=globalVariable.h
+F5=C:\cvavreval\inc\stdio.h
+F6=C:\cvavreval\inc\io.h
+F7=C:\cvavreval\inc\stdarg.h
+F8=SHT1x.h
+F9=C:\cvavreval\inc\stdint.h
+F10=SHT1x_platform.h
 [Header2]
-Files=7
+Files=11
 F1=C:\cvavreval\inc\mega32a.h
 F2=C:\cvavreval\inc\mega32_bits.h
 F3=C:\cvavreval\inc\delay.h
 F4=C:\cvavreval\inc\io.h
 F5=C:\cvavreval\inc\alcd.h
-F6=hw.h
-F7=mcu.h
+F6=globalVariable.h
+F7=hw.h
+F8=mcu.h
+F9=C:\cvavreval\inc\twi.h
+F10=C:\cvavreval\inc\stdbool.h
+F11=C:\cvavreval\inc\ds1307_twi.h
 [Header3]
 Files=2
 F1=interface.h
 F2=hw.h
+[Header4]
+Files=1
+F1=globalVariable.h
+[Header5]
+Files=2
+F1=SHT1x.h
+F2=C:\cvavreval\inc\stdint.h
+[Header6]
+Files=7
+F1=SHT1x_platform.h
+F2=C:\cvavreval\inc\stdint.h
+F3=SHT1x.h
+F4=C:\cvavreval\inc\io.h
+F5=C:\cvavreval\inc\mega32a.h
+F6=C:\cvavreval\inc\mega32_bits.h
+F7=C:\cvavreval\inc\delay.h
